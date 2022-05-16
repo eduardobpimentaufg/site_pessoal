@@ -34,6 +34,19 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: Deploy
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        uses: easingthemes/ssh-deploy@main
+        with:
+            # Private Key
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            # Remote host
+            REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+            # Remote user
+            REMOTE_USER: ${{ secrets.REMOTE_USER }}
+            # Source directory
+            SOURCE: "public/"
+            # Target directory
+            TARGET: "/home/ubuntu/code/site_pessoal"
+            # Arguments to pass to rsync
+            # ARGS: # optional, default is -rltgoDzvO
+            # An array of folder to exclude
+            # EXCLUDE: # optional, default is 
