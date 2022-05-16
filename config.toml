@@ -4,7 +4,7 @@ theme = "hugo-theme-codex"
 # Override these settings with your own
 title = "codex"
 languageCode = "en-us"
-baseURL = "http://ebpimenta.xyz/"
+baseURL = "https://ebpimenta.xyz/"
 copyright = "© {year}"
 
 # Add your Disqus shortname here.
